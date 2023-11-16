@@ -7,3 +7,6 @@ class MyTasks():
     
     def list_tasks(self):
         return list(self.all_tasks.keys())
+    
+    def mark_complete(self, task_name):
+        self.all_tasks.pop(task_name)

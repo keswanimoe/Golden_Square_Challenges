@@ -26,3 +26,8 @@ def test_list_all_tasks():
     expected = ['Laundry', 'Cleaning']
     assert actual == expected
     
+def test_mark_task_as_complete():
+    tasks.mark_complete('Laundry')
+    actual = tasks.all_tasks
+    expected = {"Cleaning": "Clean my room"}
+    assert actual == expected
